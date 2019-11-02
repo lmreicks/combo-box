@@ -1,0 +1,19 @@
+<div dropdown class="dropdown" [autoClose]="'outside'" #d="dropdown">
+	<div class="input-group input-group-merge" dropdownAnchor>
+		<input [formControl]="displayString"
+			  class="form-control form-control-appended"
+			  name="input-box"
+			  type="text" placeholder="{{ placeholder }}"
+			  autocomplete="off">
+		<div class="input-group-append">
+			<div class="input-group-text">
+				<i class="solid fas fa-chevron-down"></i>
+			</div>
+		</div>
+	</div>
+	<ul class="dropdown-menu dropdown-menu-card list-group-flush" dropdownMenu>
+		<li role="menuitem" *ngFor="let option of options" (click)="selectOption(option); d.close()">
+			<a class="dropdown-item" href="" onclick="return false;">{{ getOptionValue(option) }}</a>
+		</li>
+	</ul>
+</div>

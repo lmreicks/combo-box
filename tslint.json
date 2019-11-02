@@ -1,5 +1,4 @@
 {
-  "extends": "tslint:recommended",
   "rules": {
     "array-type": false,
     "arrow-parens": false,
@@ -12,19 +11,18 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
       "kebab-case"
     ],
     "import-blacklist": [
       true,
       "rxjs/Rx"
     ],
+    "indent": [true, "tabs", 4],
     "interface-name": false,
     "max-classes-per-file": false,
     "max-line-length": [
@@ -53,27 +51,22 @@
       "trace"
     ],
     "no-empty": false,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
+    "no-inferrable-types": false,
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
     "no-var-requires": false,
-    "object-literal-key-quotes": [
-      true,
-      "as-needed"
-    ],
+    "object-literal-key-quotes": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [
       true,
       "single"
-    ],
+	],
+	"no-angle-bracket-type-assertion": false,
     "trailing-comma": false,
     "no-conflicting-lifecycle": true,
-    "no-host-metadata-property": true,
+    "no-host-metadata-property": false,
     "no-input-rename": true,
     "no-inputs-metadata-property": true,
     "no-output-native": true,
@@ -84,8 +77,5 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true
-  },
-  "rulesDirectory": [
-    "codelyzer"
-  ]
+  }
 }
